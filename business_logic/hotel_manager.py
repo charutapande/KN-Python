@@ -1,3 +1,8 @@
+import os
+
+import model
+import data_access
+
 class Hotel:
     def __init__(self) -> None:
         self.__hotel_dal = data_access.HotelDAL()

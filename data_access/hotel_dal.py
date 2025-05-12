@@ -6,7 +6,7 @@ from data_access.base_data_access import BaseDataAccess
 class HotelDataAccess(BaseDataAccess):
     def __init__(self, db_path: str = None):
         super().__init__(db_path)
-    def search_hotels(city=None, min_stars=None, max_guests=None, check_in_date=None, check_out_date=None) -> pd.DataFrame:
+    def search_hotels(self, city=None, min_stars=None, max_guests=None, check_in_date=None, check_out_date=None) -> pd.DataFrame:
         query = """
         SELECT h.name AS Hotel_Name, h.stars AS Stars, a.street AS Street, a.city AS City, a.zip_code AS Zip_Code
         FROM Hotel h
